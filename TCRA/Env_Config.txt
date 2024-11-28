@@ -1,4 +1,4 @@
-         TC_ROOT=D:/apps_server/siemens/teamcenter14
+TC_ROOT=D:/apps_server/siemens/teamcenter14
 TC_DATA=D:/apps_server/siemens/tcdata14
 TC_TMP_DIR=D:/apps_server/temp
 VFMPATH=D:/apps
