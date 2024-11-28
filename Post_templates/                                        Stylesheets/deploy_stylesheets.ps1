@@ -2,31 +2,38 @@ param(
 [string]$REPOSITORY, [string]$ENVCONFIG_PATH
 )
 
-if ($env:taskfail -eq 1 -Or $env:jobfail -eq "true")
-{
-    Write-Host "##vso[task.setvariable variable=agent.jobstatus;]Failed"
-    Write-Host "##vso[task.complete result=Failed;]DONE"
-    return
-}
-Write-Host "##vso[task.setvariable variable=taskfail]1"
-
+# if ($env:taskfail -eq 1 -Or $env:jobfail -eq "true")
+# {
+#   Write-Host "##vso[task.setvariable variable=agent.jobstatus;]Failed"
+#   Write-Host "##vso[task.complete result=Failed;]DONE"
+#   return
+# }
+# Write-Host "##vso[task.setvariable variable=taskfail]1"
+$FOLDER_PATH='Stylesheets'
 $script:pwd = (Get-Item -Path ".\")
 
+#Fetches the Env_Config.txt file which is in Deploy_Scripts repository.Assigns value to the below variables
 $Env_Config_Path = convertfrom-stringdata (get-content $pwd\$ENVCONFIG_PATH -raw)
-Write-Host "Printing config values from file = "$Env_Config_Path.TC_DATA
 
 $TC_ROOT=$Env_Config_Path.TC_ROOT
 $TC_DATA=$Env_Config_Path.TC_DATA
-$RevRule_Path=$Env_Config_Path.RevRule_Path
-$RevRule_Bat=$Env_Config_Path.RevRule_Bat
+$STYLESHEET_PATH=$Env_Config_Path.STYLESHEET_PATH
+$STYLESHEET_PATH=$STYLESHEET_PATH.Replace("/", "\")
+#$STYLESHEET_PATH=$Env_Config_Path.RAC_PATH
+#$AWC_PATH=$Env_Config_Path.AWC_PATH
+$STYLESHEET_BAT=$Env_Config_Path.STYLESHEET_BAT
 
+$cat_setenv=$Env_Config_Path.cat_setenv
+
+#Tests TC_ROOT a valid path or not
 $ValidPath = Test-Path -Path $TC_ROOT
 if ($ValidPath -eq $False) 
 {
     Write-Host "***ERROR:Failed to find the TC_ROOT path"
     return
 }
-
+if ( $FOLDER_PATH -eq 'Stylesheets'){
+#Tests TC_DATA a valid path or not
 $ValidPath = Test-Path -Path $TC_DATA
 if ($ValidPath -eq $False) 
 {
@@ -34,88 +41,64 @@ if ($ValidPath -eq $False)
     return
 }
 
-$filenames = Get-ChildItem -Path $pwd\$REPOSITORY\$RevRule_Path -Recurse -Name -attributes !Directory | Where-Object {$_ -match "\.xml$"} 
 
-$siteName=(Get-Content $TC_DATA\model\siteinfo.properties | Where-Object {$_ -match "^siteName="} ).split("=")
-$siteName = $siteName.split(" ")
-if($siteName.length -eq 2)
-{
-    $siteName  = $siteName[1]
-}
+#Gets all the xmls of RAC from the Rich_client/Stylesheets path
+    $filenames = Get-ChildItem -Path $pwd\$REPOSITORY\$STYLESHEET_PATH\ -Name -attributes !Directory | Where-Object {$_ -match "\.xml$"} 
+    $error_value=0
+    Write-Host "1"
+        #Compares the filenames(i.e, xml from RAC stylesheets folder with masterdelta.txt)
+        $found = Get-Content $pwd\MasterDelta.txt 
 
-If($env:dryrun -eq "yes")
-{ 
-    Add-content $env:logdir/DryRunReport.txt "`n"
-}
-$error_level=0
-foreach ($filename in $filenames)
-{
-    $filename = $filename.replace("\","/")
-    $full_name = $filename
-    if ($full_name)
-    {
-        $full_name = "$RevRule_Path/$full_name"
-        
-        $found = Get-Content $pwd\$REPOSITORY\$RevRule_Path\MasterDelta.txt | Where-Object {$_ -match $full_name} 
-        
-        $match=$found
+foreach ($file in $found) { 
+
+$FileName = [System.IO.Path]::GetFileName($file) 
+
+if ($filenames -contains $FileName) { 
+    Write-Host $FileName 
+    $file_withoutextension = [System.IO.Path]::GetFileNameWithoutExtension($FileName)
+    $line =  $file_withoutextension + ", " + $FileName
+        Add-Content -Path $pwd\$REPOSITORY\$STYLESHEET_PATH\input_stylesheets.txt -Value $line
+                
+    } }
+
+    If($env:dryrun -eq "yes")
+    { 
+        Add-content $env:logdir/DryRunReport.txt "`n"
+    }
     
-        if ($found) 
+#if input_stylesheet.txt exists, it will execute below statement
+    if (Test-Path -Path $pwd\$REPOSITORY\$STYLESHEET_PATH\input_stylesheets.txt)
+    {Write-Host "16"
+        #batch file will run
+        $command = "$pwd\$REPOSITORY\$STYLESHEET_PATH\$STYLESHEET_BAT $TC_ROOT $FOLDER_PATH $cat_setenv"
+        
+        If($env:dryrun -eq "yes")
         {
-            $full_name_list = $full_name.split("/")
-            $only_filename =  $full_name_list[$full_name_list.length-1]
-            
-            $pathfolder = $found -replace "/$only_filename" , ""
-            
-            if ($pathfolder -eq $RevRule_Path)
+            Add-content $env:logdir/DryRunReport.txt "Importing Stylesheets(RAC): $command"
+        }
+        else
+        {Write-Host "7"
+            Write-Host  "Execute cmd= "  $command
+            $result=Invoke-Expression $command
+            if($result.contains("Failed to import stylesheets"))
             {
-                $command = "$(pwd)/$REPOSITORY/$RevRule_Path/$RevRule_Bat $filename $TC_ROOT"
-                If($env:dryrun -eq "yes")
-                {
-                    Add-content $env:logdir/DryRunReport.txt "Importing Non Site Specific Revison Rules: $command"
-                }
-                else
-                {
-                    Write-Host  "Non Site Specific - Execute cmd= "  $command
-                    $result=Invoke-Expression $command
-                    if($result.contains("Revision Rule Import Failed."))
-                    {
-                        Write-Host $result
-                        $error_level=1
-                    }
-                }
+                $error_value=1
+                Write-Host  $result
             }
-            else
-            {
-                if($match.contains($siteName))
-                {
-                    $command = "$(pwd)/$REPOSITORY/$RevRule_Path/$RevRule_Bat $filename $TC_ROOT"
-                    If($env:dryrun -eq "yes")
-                    {
-                       Add-content $env:logdir/DryRunReport.txt "Importing Site Specific Revison Rules: $command"
-                    }
-                   else
-                   {
-                        Write-Host  " Site Specific - Execute cmd= "  $command
-                        $result=Invoke-Expression $command
-                        if($result.contains("Revision Rule Import Failed."))
-                        {
-                            Write-Host $result
-                            $error_level=1
-                        }
-                   }
-                }
-            }
+            
         }
     }
+
 }
 
-if($error_level -eq 0)
+if ($error_value -eq 0)
 {
     Write-Host "##vso[task.setvariable variable=taskfail]0"
 }
 else
 {
-    Write-Host "Importing Revision Rules failed"
-    exit 1
+   Write-Host "Style Sheet import operation failed"
+   exit 1
 }
+ 
+
