@@ -2,7 +2,7 @@
 # if ($env:taskfail -eq 1 -Or $env:jobfail -eq "true")
 # {
 #   Write-Host "##vso[task.setvariable variable=agent.jobstatus;]Failed"
-#Write-Host "##vso[task.complete result=Failed;]DONE"
+#   Write-Host "##vso[task.complete result=Failed;]DONE"
 #   return
 # }
 # Write-Host "##vso[task.setvariable variable=taskfail]1"
