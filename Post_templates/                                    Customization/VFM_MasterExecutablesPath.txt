@@ -1,0 +1,10 @@
+assy_analyser.dll|D:\apps\vfm_binaries\VFM\bin
+BoundingBox.dll|D:\apps\Dispatcher\Module\Translators\cat_boundingbox
+CAT_Translate_To_STEP.dll|D:\apps\vfm_binaries\VFM\bin
+CATCreateSimplfiedStructure.dll|D:\apps\vfm_binaries\SimpShare\bin
+CRB_Creo.exe|D:\apps\vfm_binaries\CRBTIFF\bin
+Create_HPGL.dll|D:\apps\vfm_binaries\NSizeTiff\bin
+SS_Converter.dll|D:\apps\vfm_binaries\SimpShare\bin
+TC_CREO_MAP.dll|D:\apps\vfm_binaries\SimpShare\bin
+CATSimpShareProEToNeutral.dll|D:\apps\vfm_binaries\SimpShare\bin 
+ 
