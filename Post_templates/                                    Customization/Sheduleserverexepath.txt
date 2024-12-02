@@ -1,0 +1,1 @@
+EDS_VersionSync.exe|D:\apps_server\Siemens\cat\tools\EDSDataSync
