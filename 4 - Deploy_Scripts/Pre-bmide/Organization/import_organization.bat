@@ -5,8 +5,6 @@ rem   Input Argument 2: TC_ROOT path value
 rem 
 set TC_ROOT=%2
 if not defined TC_ROOT  goto tcrooterror
-set CAT_SSO=NO
-call %TC_ROOT%\cat\cat_setenv.bat
 if not defined TC_BIN   goto tcbinerror
 if not defined TC_DATA  goto tcdataerror
 set CURRENTDIR=%~dp0
