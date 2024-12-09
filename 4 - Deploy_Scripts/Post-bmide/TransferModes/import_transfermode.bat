@@ -8,9 +8,6 @@ rem
 IF %1 == goto invalidnameerror 
 set TC_ROOT=%2
 if not defined TC_ROOT  goto tcrooterror
-set CAT_SSO=NO
-rem  %TC_ROOT%\cat\cat_setenv.bat
-call D:\apps_server\Siemens\cat\cat_setenv.bat
 if not defined TC_BIN   goto tcbinerror
 if not defined TC_DATA  goto tcdataerror
 
