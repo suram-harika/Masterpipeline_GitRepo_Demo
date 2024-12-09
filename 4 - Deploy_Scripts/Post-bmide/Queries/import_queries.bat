@@ -8,7 +8,6 @@ rem
 IF %1 == goto invalidquerynameerror 
 set TC_ROOT=%2
 if not defined TC_ROOT  goto tcrooterror
-set CAT_SSO=NO
 call %3
 
 if not defined TC_BIN   goto tcbinerror
