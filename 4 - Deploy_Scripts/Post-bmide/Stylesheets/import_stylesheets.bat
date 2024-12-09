@@ -7,8 +7,7 @@ rem
 
 set TC_ROOT=%1
 if not defined TC_ROOT  goto tcrooterror
-set CAT_SSO=NO
-call D:\apps_server\Siemens\cat\cat_setenv.bat
+
 echo %ipwfile%
 if not defined TC_BIN   goto tcbinerror
 if not defined TC_DATA  goto tcdataerror
