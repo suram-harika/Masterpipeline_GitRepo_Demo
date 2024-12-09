@@ -10,10 +10,6 @@ IF %1 == goto invalidreportnameerror
 IF %2 == goto invalidstagedirerror  
 set TC_ROOT=%3
 if not defined TC_ROOT  goto tcrooterror
-set CAT_SSO=NO
-rem call %TC_ROOT%\cat\cat_setenv.bat
-call D:\apps_server\Siemens\cat\cat_setenv.bat
-echo after calling cat_setenv
 if not defined TC_BIN   goto tcbinerror
 if not defined TC_DATA  goto tcdataerror
 set CURRENTDIR=%~dp0
