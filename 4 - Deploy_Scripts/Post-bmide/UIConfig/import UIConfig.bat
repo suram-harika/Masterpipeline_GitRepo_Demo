@@ -6,8 +6,6 @@ rem   Input Argument 2: TC_ROOT folder path
 rem 
 
 REM setting TC Env
-set cat_sso=no
-call D:\apps_server\Siemens\cat\cat_setenv.bat
 set AM_BYPASS=TRUE
 
 rem set CURRENTDIR=%~dp0
