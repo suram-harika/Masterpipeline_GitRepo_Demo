@@ -8,8 +8,6 @@ rem
 IF %1 == goto invalid_input_file_error 
 set TC_ROOT=%2
 if not defined TC_ROOT  goto tcrooterror
-set CAT_SSO=NO
-call D:/apps_server/Siemens/cat/cat_setenv.bat
 
 if not defined TC_BIN   goto tcbinerror
 if not defined TC_DATA  goto tcdataerror
