@@ -1,5 +1,4 @@
-set cat_sso=no
-call "D:\apps_server\Siemens\cat\cat_setenv.bat"
+
 echo %1
 echo %2
 echo %3
