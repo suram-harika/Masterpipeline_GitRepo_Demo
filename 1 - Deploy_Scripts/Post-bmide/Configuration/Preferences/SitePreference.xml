@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<preferences version="10.0">
+  <category name="Active Workspace">
+    <category_description>No description available for this category.</category_description>
+    <preference name="C9_Design.CREATERENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Preference for Design Item Creation</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_C9_DesignCreate</value>
+      </context>
+    </preference>
+    <preference name="C9_DesignRevision.SUMMARYRENDERING" type="String" array="false" disabled="false" protectionScope="Site" envEnabled="false">
+      <preference_description>Preference for Design Revision Summary</preference_description>
+      <context name="Teamcenter">
+        <value>AWC_C9_DesignRevSummary</value>
+      </context>
+    </preference>
+  </category>
+</preferences>
