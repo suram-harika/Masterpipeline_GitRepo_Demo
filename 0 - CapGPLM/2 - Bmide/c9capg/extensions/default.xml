@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" Date="">
+<Add>
+   <TcClass className="C9_Design" parentClassName="C9_DesignAbs" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignAbs" parentClassName="Design" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignAbsMasterS" parentClassName="DesignMaster" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignAbsRevMasterS" parentClassName="DesignVerMaster" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignAbsRevision" parentClassName="Design_0_Revision_alt"
+       isExportable="false" isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignMasterS" parentClassName="C9_DesignAbsMasterS" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignRevMasterS" parentClassName="C9_DesignAbsRevMasterS"
+       isExportable="false" isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="C9_DesignRevision" parentClassName="C9_DesignAbsRevision" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description="">
+     <TcAttribute attributeName="c9_Material" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+   </TcClass>
+   <OperationInputType typeName="C9_DesignAbsCreI" parentTypeName="DesignCreI" typeClassName="C9_DesignAbsCreI"
+       description="CreateInput object for &quot;C9_DesignAbs&quot; business object"
+       isAbstract="true" artifactName="C9_DesignAbsCreI"/>
+   <OperationInputType typeName="C9_DesignAbsMasterCreI" parentTypeName="Design MasterCreI"
+       typeClassName="C9_DesignAbsMasterCreI" description="CreateInput object for &quot;C9_DesignAbsMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsMasterCreI"/>
+   <OperationInputType typeName="C9_DesignAbsMasterSCreI" parentTypeName="DesignMasterCreI"
+       typeClassName="C9_DesignAbsMasterSCreI" description="CreateInput object for &quot;C9_DesignAbsMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsMasterSCreI"/>
+   <OperationInputType typeName="C9_DesignAbsMasterSSvAI" parentTypeName="DesignMasterSvAI"
+       typeClassName="C9_DesignAbsMasterSSvAI" description="SaveAsInput object for &quot;C9_DesignAbsMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsMasterSSvAI"/>
+   <OperationInputType typeName="C9_DesignAbsMasterSvAI" parentTypeName="Design MasterSvAI"
+       typeClassName="C9_DesignAbsMasterSvAI" description="SaveAsInput object for &quot;C9_DesignAbsMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsMasterSvAI"/>
+   <OperationInputType typeName="C9_DesignAbsRevMasterSCreI" parentTypeName="DesignVerMasterCreI"
+       typeClassName="C9_DesignAbsRevMasterSCreI" description="CreateInput object for &quot;C9_DesignAbsRevMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsRevMasterSCreI"/>
+   <OperationInputType typeName="C9_DesignAbsRevMasterSSvAI" parentTypeName="DesignVerMasterSvAI"
+       typeClassName="C9_DesignAbsRevMasterSSvAI" description="SaveAsInput object for &quot;C9_DesignAbsRevMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsRevMasterSSvAI"/>
+   <OperationInputType typeName="C9_DesignAbsRevisionCreI" parentTypeName="Design RevisionCreI"
+       typeClassName="C9_DesignAbsRevisionCreI" description="CreateInput object for &quot;C9_DesignAbsRevision&quot; business object"
+       isAbstract="true" artifactName="C9_DesignAbsRevisionCreI"/>
+   <OperationInputType typeName="C9_DesignAbsRevisionMasterCreI" parentTypeName="Design Revision MasterCreI"
+       typeClassName="C9_DesignAbsRevisionMasterCreI" description="CreateInput object for &quot;C9_DesignAbsRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsRevisionMasterCreI"/>
+   <OperationInputType typeName="C9_DesignAbsRevisionMasterSvAI" parentTypeName="Design Revision MasterSvAI"
+       typeClassName="C9_DesignAbsRevisionMasterSvAI" description="SaveAsInput object for &quot;C9_DesignAbsRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsRevisionMasterSvAI"/>
+   <OperationInputType typeName="C9_DesignAbsRevisionRevI" parentTypeName="Design RevisionRevI"
+       typeClassName="C9_DesignAbsRevisionRevI" description="ReviseInput object for &quot;C9_DesignAbsRevision&quot; business object"
+       isAbstract="true" artifactName="C9_DesignAbsRevisionRevI"/>
+   <OperationInputType typeName="C9_DesignAbsRevisionSvAI" parentTypeName="Design RevisionSvAI"
+       typeClassName="C9_DesignAbsRevisionSvAI" description="SaveAsInput object for &quot;C9_DesignAbsRevision&quot; business object"
+       isAbstract="true" artifactName="C9_DesignAbsRevisionSvAI"/>
+   <OperationInputType typeName="C9_DesignAbsSvAI" parentTypeName="DesignSvAI" typeClassName="C9_DesignAbsSvAI"
+       description="SaveAsInput object for &quot;C9_DesignAbs&quot; business object"
+       isAbstract="true" artifactName="C9_DesignAbsSvAI"/>
+   <OperationInputType typeName="C9_DesignCreI" parentTypeName="C9_DesignAbsCreI"
+       typeClassName="C9_DesignCreI" description="CreateInput object for &quot;C9_Design&quot; business object"
+       isAbstract="false" artifactName="C9_DesignCreI"/>
+   <OperationInputType typeName="C9_DesignMasterCreI" parentTypeName="C9_DesignAbsMasterCreI"
+       typeClassName="C9_DesignMasterCreI" description="CreateInput object for &quot;C9_DesignMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignMasterCreI"/>
+   <OperationInputType typeName="C9_DesignMasterSCreI" parentTypeName="C9_DesignAbsMasterSCreI"
+       typeClassName="C9_DesignMasterSCreI" description="CreateInput object for &quot;C9_DesignMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignMasterSCreI"/>
+   <OperationInputType typeName="C9_DesignMasterSSvAI" parentTypeName="C9_DesignAbsMasterSSvAI"
+       typeClassName="C9_DesignMasterSSvAI" description="SaveAsInput object for &quot;C9_DesignMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignMasterSSvAI"/>
+   <OperationInputType typeName="C9_DesignMasterSvAI" parentTypeName="C9_DesignAbsMasterSvAI"
+       typeClassName="C9_DesignMasterSvAI" description="SaveAsInput object for &quot;C9_DesignMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignMasterSvAI"/>
+   <OperationInputType typeName="C9_DesignRevMasterSCreI" parentTypeName="C9_DesignAbsRevMasterSCreI"
+       typeClassName="C9_DesignRevMasterSCreI" description="CreateInput object for &quot;C9_DesignRevMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevMasterSCreI"/>
+   <OperationInputType typeName="C9_DesignRevMasterSSvAI" parentTypeName="C9_DesignAbsRevMasterSSvAI"
+       typeClassName="C9_DesignRevMasterSSvAI" description="SaveAsInput object for &quot;C9_DesignRevMasterS&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevMasterSSvAI"/>
+   <OperationInputType typeName="C9_DesignRevisionCreI" parentTypeName="C9_DesignAbsRevisionCreI"
+       typeClassName="C9_DesignRevisionCreI" description="CreateInput object for &quot;C9_DesignRevision&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevisionCreI">
+     <OperationInputProperty propName="c9_Material" compoundObjectConstant="" srcPropName="c9_Material"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </OperationInputType>
+   <OperationInputType typeName="C9_DesignRevisionMasterCreI" parentTypeName="C9_DesignAbsRevisionMasterCreI"
+       typeClassName="C9_DesignRevisionMasterCreI" description="CreateInput object for &quot;C9_DesignRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevisionMasterCreI"/>
+   <OperationInputType typeName="C9_DesignRevisionMasterSvAI" parentTypeName="C9_DesignAbsRevisionMasterSvAI"
+       typeClassName="C9_DesignRevisionMasterSvAI" description="SaveAsInput object for &quot;C9_DesignRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevisionMasterSvAI"/>
+   <OperationInputType typeName="C9_DesignRevisionRevI" parentTypeName="C9_DesignAbsRevisionRevI"
+       typeClassName="C9_DesignRevisionRevI" description="ReviseInput object for &quot;C9_DesignRevision&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevisionRevI"/>
+   <OperationInputType typeName="C9_DesignRevisionSvAI" parentTypeName="C9_DesignAbsRevisionSvAI"
+       typeClassName="C9_DesignRevisionSvAI" description="SaveAsInput object for &quot;C9_DesignRevision&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevisionSvAI"/>
+   <OperationInputType typeName="C9_DesignSvAI" parentTypeName="C9_DesignAbsSvAI"
+       typeClassName="C9_DesignSvAI" description="SaveAsInput object for &quot;C9_Design&quot; business object"
+       isAbstract="false" artifactName="C9_DesignSvAI"/>
+   <TcForm typeName="C9_DesignAbsMaster" parentTypeName="Design Master" typeClassName="Form"
+       description="MasterForm object for &quot;C9_DesignAbs&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsMaster" functionality="C9_capg"
+       formStorageClassName="C9_DesignAbsMasterS"/>
+   <TcForm typeName="C9_DesignAbsRevisionMaster" parentTypeName="Design Revision Master"
+       typeClassName="Form" description="MasterForm object for &quot;C9_DesignAbsRevision&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsRevisionMaster" functionality="C9_capg"
+       formStorageClassName="C9_DesignAbsRevMasterS"/>
+   <TcForm typeName="C9_DesignMaster" parentTypeName="C9_DesignAbsMaster" typeClassName="Form"
+       description="MasterForm object for &quot;C9_Design&quot; business object" isAbstract="false"
+       artifactName="C9_DesignMaster" functionality="C9_capg" formStorageClassName="C9_DesignMasterS"/>
+   <TcForm typeName="C9_DesignRevisionMaster" parentTypeName="C9_DesignAbsRevisionMaster"
+       typeClassName="Form" description="MasterForm object for &quot;C9_DesignRevision&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevisionMaster" functionality="C9_capg"
+       formStorageClassName="C9_DesignRevMasterS"/>
+   <TcStandardType typeName="C9_Design" parentTypeName="C9_DesignAbs" typeClassName="C9_Design"
+       description="" isAbstract="false" artifactName="C9_Design" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignAbs" parentTypeName="Design" typeClassName="C9_DesignAbs"
+       description="" isAbstract="true" artifactName="C9_DesignAbs" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignAbsMasterS" parentTypeName="DesignMaster" typeClassName="C9_DesignAbsMasterS"
+       description="Form Storage object for &quot;C9_DesignAbsMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsMasterS" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignAbsRevMasterS" parentTypeName="DesignVerMaster"
+       typeClassName="C9_DesignAbsRevMasterS" description="Form Storage object for &quot;C9_DesignAbsRevMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignAbsRevMasterS" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignAbsRevision" parentTypeName="Design Revision"
+       typeClassName="C9_DesignAbsRevision" description="ItemRevision object for &quot;C9_DesignAbs&quot;  business object"
+       isAbstract="true" artifactName="C9_DesignAbsRevision" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignMasterS" parentTypeName="C9_DesignAbsMasterS"
+       typeClassName="C9_DesignMasterS" description="Form Storage object for &quot;C9_DesignMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignMasterS" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignRevMasterS" parentTypeName="C9_DesignAbsRevMasterS"
+       typeClassName="C9_DesignRevMasterS" description="Form Storage object for &quot;C9_DesignRevMaster&quot; business object"
+       isAbstract="false" artifactName="C9_DesignRevMasterS" functionality="C9_capg"/>
+   <TcStandardType typeName="C9_DesignRevision" parentTypeName="C9_DesignAbsRevision"
+       typeClassName="C9_DesignRevision" description="ItemRevision object for &quot;C9_Design&quot;  business object"
+       isAbstract="false" artifactName="C9_DesignRevision" functionality="C9_capg"/>
+   <TcGlobalConstantAttach constantName="Fnd0SelectedLocales" value="en_US"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_Design" value="C9_DesignCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignAbs" value="C9_DesignAbsCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignAbsMaster"
+       value="C9_DesignAbsMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignAbsMasterS"
+       value="C9_DesignAbsMasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignAbsRevision"
+       value="C9_DesignAbsRevisionCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignAbsRevisionMaster"
+       value="C9_DesignAbsRevisionMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignAbsRevMasterS"
+       value="C9_DesignAbsRevMasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignMaster" value="C9_DesignMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignMasterS" value="C9_DesignMasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignRevision" value="C9_DesignRevisionCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignRevisionMaster"
+       value="C9_DesignRevisionMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="C9_DesignRevMasterS"
+       value="C9_DesignRevMasterSCreI"/>
+   <TcTypeConstantAttach constantName="ItemRevision" typeName="C9_Design" value="C9_DesignRevision"/>
+   <TcTypeConstantAttach constantName="ItemRevision" typeName="C9_DesignAbs" value="C9_DesignAbsRevision"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="C9_Design" value="C9_DesignMaster"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="C9_DesignAbs" value="C9_DesignAbsMaster"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="C9_DesignAbsRevision"
+       value="C9_DesignAbsRevisionMaster"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="C9_DesignRevision" value="C9_DesignRevisionMaster"/>
+   <TcTypeConstantAttach constantName="ReviseInput" typeName="C9_DesignAbsRevision"
+       value="C9_DesignAbsRevisionRevI"/>
+   <TcTypeConstantAttach constantName="ReviseInput" typeName="C9_DesignRevision" value="C9_DesignRevisionRevI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_Design" value="C9_DesignSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignAbs" value="C9_DesignAbsSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignAbsMaster"
+       value="C9_DesignAbsMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignAbsMasterS"
+       value="C9_DesignAbsMasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignAbsRevision"
+       value="C9_DesignAbsRevisionSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignAbsRevisionMaster"
+       value="C9_DesignAbsRevisionMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignAbsRevMasterS"
+       value="C9_DesignAbsRevMasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignMaster" value="C9_DesignMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignMasterS" value="C9_DesignMasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignRevision" value="C9_DesignRevisionSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignRevisionMaster"
+       value="C9_DesignRevisionMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="C9_DesignRevMasterS"
+       value="C9_DesignRevMasterSSvAI"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="C9_DesignRevision" propertyName="c9_Material"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="C9_DesignRevision"
+       propertyName="c9_Material" value="Write"/>
+   <TcTypeDisplayRule hiddenTypeName="C9_DesignAbs" accessorName="Organization" accessorType="Organization"
+       conditionName="isTrue" description=""/>
+   <TcTypeDisplayRule hiddenTypeName="Design" accessorName="Organization" accessorType="Organization"
+       conditionName="isTrue" description=""/>
+   <TcLOV name="C9_Material_LOV" lovType="ListOfValuesString" usage="Exhaustive" description=""
+       isManagedExternally="true"/>
+   <Functionality name="C9_capg" displayName="TC uslab01 Template" enabledForVerificationRules="false"
+       description="Component for the template - c9capg"/>
+</Add>
+</TcBusinessData>

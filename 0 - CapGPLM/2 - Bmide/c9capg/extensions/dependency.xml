@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TcBusinessDataIncludes ActiveRelease="tc2406" currentTemplateVersion="2312.0_0" displayName="TC uslab01 Template" enableOpsDataDeploy="true" guid="8DDF5ED2053C4FF149BF0130E5D03B90" isDescriptionMandatory="false" name="c9capg" optional="true" prefixes="C9_" teamcenterTemplate="false">
+    <include file="foundation_template.xml"/>
+</TcBusinessDataIncludes>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessDataLocalization xmlns="http://teamcenter.com/BusinessModel/TcBusinessDataLocalization"
+    Date="">
+<Add>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignAbsMasterS" status="Approved">Design Abs Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignAbsMaster" status="Approved">Design Abs Master</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignAbsRevMasterS" status="Approved">Design Abs Revision Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignAbsRevisionMaster" status="Approved">Design Abs Revision Master</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignAbsRevision" status="Approved">Design Abs Revision</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignAbs" status="Approved">Design Abstract</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignMasterS" status="Approved">Design Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignMaster" status="Approved">Design Master</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignRevMasterS" status="Approved">Design Revision Master Storage</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignRevisionMaster" status="Approved">Design Revision Master</key>
+   <key locale="en_US" id="BusinessObject{::}C9_DesignRevision" status="Approved">Design Revision</key>
+   <key locale="en_US" id="BusinessObject{::}C9_Design" status="Approved">CAPG Design</key>
+   <key locale="en_US" id="Property{::}C9_DesignRevision{::}c9_Material" status="Approved">Material</key>
+</Add>
+</TcBusinessDataLocalization>
