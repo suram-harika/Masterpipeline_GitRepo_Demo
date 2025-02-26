@@ -18,6 +18,6 @@ softwareVersion=14.1
  
 
 
-STYLESHEET_PATH=1 - Deploy_Scripts/Post-bmide/Configuration/Stylesheets
+STYLESHEET_PATH=Deploy_Scripts/Post-bmide/Configuration/Stylesheets
 STYLESHEET_BAT=import_stylesheets.bat
  
