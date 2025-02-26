@@ -9,8 +9,8 @@ TC_APPS_SERVER=D:/apps_server
 TC_APPS_pool_web=D:/apps
  
  
-SOURCE_BRANCH=2024_EPLM4_Tag_16-sep 
-DEPLOY_BRANCH=2024_OCT_ICW_Tag_04-oct
+SOURCE_BRANCH=main
+DEPLOY_BRANCH=empty_main
  
 dependencyTemplateFolder=D:/apps_server/Siemens/tcdata14/model
 projectLocation=iPI/bmide/
