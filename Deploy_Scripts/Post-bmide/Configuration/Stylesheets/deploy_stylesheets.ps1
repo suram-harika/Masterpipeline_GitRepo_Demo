@@ -70,7 +70,7 @@ if ($filenames -contains $FileName) {
     if (Test-Path -Path $pwd\$REPOSITORY\$STYLESHEET_PATH\input_stylesheets.txt)
     {Write-Host "16"
         #batch file will run
-        $command = "$pwd\$REPOSITORY\$STYLESHEET_PATH\$STYLESHEET_BAT $TC_ROOT $FOLDER_PATH $cat_setenv"
+        $command = "$pwd\$REPOSITORY\$STYLESHEET_PATH\$STYLESHEET_BAT $TC_ROOT $FOLDER_PATH"
         
         If($env:dryrun -eq "yes")
         {
