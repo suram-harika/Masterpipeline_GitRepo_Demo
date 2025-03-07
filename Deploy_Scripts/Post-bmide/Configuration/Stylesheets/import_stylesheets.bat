@@ -23,7 +23,7 @@ rem set TC_SSO_APP_ID=
 powershell.exe -Command "Write-Host 'This is a message'"
 echo %ARTIFACT_FOLDER%
 
-%TC_BIN%\install_xml_stylesheet_datasets.exe -g=dba -u=infodba -pf=%ipwfile%  -input=%ARTIFACT_FOLDER%/input_stylesheets.txt -filepath=%ARTIFACT_FOLDER% -replace>%ARTIFACT_FOLDER%/Stylesheets_Import.log
+%TC_BIN%\install_xml_stylesheet_datasets.exe -g=dba -u=infodba -p=infodba  -input=%ARTIFACT_FOLDER%/input_stylesheets.txt -filepath=%ARTIFACT_FOLDER% -replace>%ARTIFACT_FOLDER%/Stylesheets_Import.log
 
 set logfile="%ARTIFACT_FOLDER%/Stylesheets_Import.log"
 find /c /I "Error" %logfile%  && (goto error ) || ( echo  Stylesheet Imported Successfully!!! )
