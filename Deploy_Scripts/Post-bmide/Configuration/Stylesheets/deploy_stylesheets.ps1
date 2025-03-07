@@ -47,7 +47,7 @@ if ($ValidPath -eq $False)
     $error_value=0
     Write-Host "1"
         #Compares the filenames(i.e, xml from RAC stylesheets folder with masterdelta.txt)
-        $found = Get-Content $pwd\MasterDelta.txt 
+        $found = Get-Content $pwd\$REPOSITORY\MasterDelta.txt 
 
 foreach ($file in $found) { 
 
