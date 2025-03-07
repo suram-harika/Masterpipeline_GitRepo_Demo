@@ -23,7 +23,6 @@ $STYLESHEET_PATH=$STYLESHEET_PATH.Replace("/", "\")
 #$AWC_PATH=$Env_Config_Path.AWC_PATH
 $STYLESHEET_BAT=$Env_Config_Path.STYLESHEET_BAT
  
-$cat_setenv=$Env_Config_Path.cat_setenv
  
 #Tests TC_ROOT a valid path or not
 $ValidPath = Test-Path -Path $TC_ROOT
