@@ -1,5 +1,5 @@
 TC_ROOT=C:/Siemens/Teamcenter2406
-TC_DATA=C:/apps/VDI_ENV/Teamcenter/tcdata
+TC_DATA=C:/Siemens/tcdata
 TC_TMP_DIR=C:/temp
 VFMPATH=D:/apps
 OTO_PATH=D:/apps_server/tc_temp
