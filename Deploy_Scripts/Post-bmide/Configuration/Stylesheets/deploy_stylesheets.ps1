@@ -99,6 +99,5 @@ else
 {
    Write-Host "Style Sheet import operation failed"
    exit 1
-}
- 
+} 
 
