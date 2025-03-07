@@ -19,5 +19,5 @@ softwareVersion=14.1
 
 
 STYLESHEET_PATH=CapGPLM/Post-bmide/Configuration/Stylesheets
-STYLESHEET_BAT=import_stylesheets.bat
+STYLESHEET_BAT=Deploy_Scripts/Post-bmide/Configuration/Stylesheets/import_stylesheets.bat
  
