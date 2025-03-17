@@ -1,18 +1,18 @@
 TC_ROOT=C:/Siemens/Teamcenter2406
 TC_DATA=C:/Siemens/tcdata
 TC_TMP_DIR=C:/temp
-VFMPATH=D:/apps
-OTO_PATH=D:/apps_server/tc_temp
-IDRIVE=D:/apps
-BACKUP_DIR=D:/apps_server/tc_temp/backups
-TC_APPS_SERVER=D:/apps_server
+VFMPATH=C:/apps
+OTO_PATH=C:/apps_server/tc_temp
+IDRIVE=C:/apps
+BACKUP_DIR=C:/apps_server/tc_temp/backups
+TC_APPS_SERVER=C:/apps_server
 TC_APPS_pool_web=D:/apps
  
  
 SOURCE_BRANCH=main
 DEPLOY_BRANCH=empty_main
  
-dependencyTemplateFolder=D:/apps_server/Siemens/tcdata14/model
+dependencyTemplateFolder=C:/apps_server/Siemens/tcdata14/model
 projectLocation=iPI/bmide/
 softwareVersion=14.1
  
