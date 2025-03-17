@@ -10,5 +10,5 @@ echo %WorkDir%\%projectLocation%\%PackageName%
 echo %dependencyTemplateFolder%
 echo %softwareVersion%
 echo %WorkDir%\%projectLocation%\%PackageName%.log
-call %TC_BIN%\bmide_generate_package -projectLocation=%WorkDir%\%projectLocation%\%PackageName% -dependencyTemplateFolder=%dependencyTemplateFolder% -softwareVersion=%softwareVersion% -log=%WorkDir%\%projectLocation%\%PackageName%.log
+call %TC_ROOT%\bin\bmide_generate_package -projectLocation=%WorkDir%\%projectLocation%\%PackageName% -dependencyTemplateFolder=%dependencyTemplateFolder% -softwareVersion=%softwareVersion% -log=%WorkDir%\%projectLocation%\%PackageName%.log
 exit
