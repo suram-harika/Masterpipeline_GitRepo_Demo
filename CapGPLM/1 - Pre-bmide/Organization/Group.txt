@@ -1,1 +1,1 @@
-make_user -u=infodba -p=infodba -g=dba -group=Project Management.Engineering
+take_user -u=infodba -p=infodba -g=dba -group=Project Management.Engineering
