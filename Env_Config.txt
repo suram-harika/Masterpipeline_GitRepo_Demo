@@ -1,6 +1,6 @@
 TC_ROOT=C:/Siemens/Teamcenter2408
 TC_DATA=C:/Siemens/tcdata
-TC_TMP_DIR=C:/temp
+TC_TMP_DIR=C:/tem
 VFMPATH=C:/apps
 OTO_PATH=C:/apps_server/tc_temp
 IDRIVE=C:/apps
