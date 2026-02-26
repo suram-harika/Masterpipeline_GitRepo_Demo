@@ -1,0 +1,5 @@
+{
+  "Build_Scripts": "Build_Scripts_Pipeline-Test",
+  "CapGPLM": "CapGPLM_Pipeline-Test",
+  "Deploy_Scripts": "Deploy_Scripts_Pipeline_Test"
+}
